@@ -1,0 +1,331 @@
+﻿<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oddaj Dalej – giełda niewykorzystanych okazji</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Sora:wght@800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Ikony -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 6v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-6z"/><path d="M14 6v2M14 11v2M14 16v2"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 15v-3.5L6.2 6h11.6L20 11.5V15"/><rect x="3" y="15" width="18" height="4" rx="1.5"/><path d="M7.5 17h.01M16.5 17h.01"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18V6M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.5"/></symbol>
+  <symbol id="i-dumbbell" viewBox="0 0 24 24"><path d="M6 7v10M3 9v6M18 7v10M21 9v6M6 12h12"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16v4M17 18h4"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-user-check" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 11l2 2 4-4"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="m21 16-5-5-8 8"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Przejdź do treści</a>
+
+<div class="announce">
+  <p>Nowość: powiadomienia o ofertach pasujących do Twojego terminu. <a href="#">Sprawdź</a></p>
+</div>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="logo" href="/" aria-label="Oddaj Dalej – strona główna">
+      <span class="logo__mark"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+      <span class="logo__word">Oddaj Dalej</span>
+    </a>
+    <nav class="site-nav" aria-label="Główna nawigacja">
+      <ul class="site-nav__list">
+        <li><a class="active" href="#oferty">Oferty</a></li>
+        <li><a href="#szukam">Szukam</a></li>
+        <li><a href="#mapa">Mapa okazji</a></li>
+        <li><a href="#jak-to-dziala">Jak to działa</a></li>
+      </ul>
+      <div class="site-nav__actions">
+        <a class="btn btn--ghost btn--sm" href="#">Zaloguj</a>
+        <a class="btn btn--primary btn--sm" href="#">Dodaj ogłoszenie</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero on-dark" aria-labelledby="hero-title">
+    <div class="container hero__grid">
+      <div>
+        <p class="hero__badge">Giełda niewykorzystanych okazji</p>
+        <h1 id="hero-title" class="hero__title">
+          <span class="hero__line">Nie</span>
+          <span class="hero__line">wykorzystasz?</span>
+          <span class="hero__line hero__line--accent">Nie zmarnuj!</span>
+        </h1>
+        <p class="hero__lead">Skipassy, wyjazdy, noclegi i wolne miejsca w aucie. Znajdź okazję albo sprzedaj swoje miejsce.</p>
+
+        <form class="searchbar" role="search" action="#" method="get">
+          <div class="searchbar__field">
+            <label for="s-what">Czego szukasz?</label>
+            <input id="s-what" name="q" type="search" placeholder="skipass, nocleg…" autocomplete="off">
+          </div>
+          <div class="searchbar__field">
+            <label for="s-where">Gdzie</label>
+            <input id="s-where" name="gdzie" type="text" placeholder="Miejsce">
+          </div>
+          <div class="searchbar__field">
+            <label for="s-when">Termin</label>
+            <input id="s-when" name="termin" type="text" placeholder="15–20 stycznia">
+          </div>
+          <button class="btn btn--primary" type="submit">Szukaj</button>
+        </form>
+
+        <ul class="chips" aria-label="Szybkie kategorie">
+          <li><a class="chip" href="#">Skipassy</a></li>
+          <li><a class="chip" href="#">Wycieczki</a></li>
+          <li><a class="chip" href="#">Transport</a></li>
+          <li><a class="chip" href="#">Noclegi</a></li>
+          <li><a class="chip" href="#">Sport</a></li>
+        </ul>
+
+        <ul class="assurances">
+          <li><svg class="icon"><use href="#i-check"/></svg>Bez prowizji na start</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Czat bez numeru telefonu</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Ochrona kupującego</li>
+        </ul>
+      </div>
+
+      <div class="hero__visual">
+        <h2 class="visually-hidden">Wyróżnione okazje</h2>
+
+        <article class="ticket ticket--float ticket--float-a">
+          <div class="ticket__media"><div class="ph" role="img" aria-label="Zdjęcie oferty"><svg class="icon icon--lg"><use href="#i-ticket"/></svg><span>Zdjęcie oferty</span></div></div>
+          <div class="ticket__body">
+            <div class="ticket__meta"><span class="tag"><svg class="icon icon--sm"><use href="#i-ticket"/></svg>Skipass</span><span class="ticket__when">Za 5 dni</span></div>
+            <h3 class="ticket__title"><a class="ticket__link" href="#">Skipass Jasná – 2 dni</a></h3>
+            <p class="ticket__sub">15–16 stycznia · Słowacja</p>
+          </div>
+          <div class="ticket__stub"><p class="ticket__price">300 zł</p><span class="btn btn--secondary btn--sm" aria-hidden="true">Zobacz</span></div>
+        </article>
+
+        <article class="ticket ticket--float ticket--float-b">
+          <div class="ticket__media"><div class="ph" role="img" aria-label="Zdjęcie oferty"><svg class="icon icon--lg"><use href="#i-car"/></svg><span>Zdjęcie oferty</span></div></div>
+          <div class="ticket__body">
+            <div class="ticket__meta"><span class="tag tag--transport"><svg class="icon icon--sm"><use href="#i-car"/></svg>Transport</span><span class="ticket__when">Za 2 dni</span></div>
+            <h3 class="ticket__title"><a class="ticket__link" href="#">Wolne 2 miejsca</a></h3>
+            <p class="ticket__sub">Kraków → Zakopane</p>
+          </div>
+          <div class="ticket__stub"><p class="ticket__price">50 zł/os.</p><span class="btn btn--secondary btn--sm" aria-hidden="true">Zobacz</span></div>
+        </article>
+      </div>
+    </div>
+
+    <svg class="hero__ridge" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path class="ridge__back" d="M0 200V120L120 70 240 110 380 40 520 100 640 60 780 120 920 50 1080 110 1220 70 1440 130V200Z"/>
+      <path class="ridge__mid" d="M0 200V150L160 105 300 140 460 90 620 135 800 100 960 145 1120 110 1300 150 1440 120V200Z"/>
+      <path class="ridge__front" d="M0 200V170L180 140 360 165 560 130 760 160 960 135 1180 165 1440 145V200Z"/>
+    </svg>
+  </section>
+
+  <!-- KATEGORIE -->
+  <section class="section" aria-labelledby="cat-title">
+    <div class="container">
+      <div class="section-head"><h2 id="cat-title" class="section__title">Czego szukasz?</h2></div>
+      <div class="bento">
+        <a class="tile tile--skipassy" href="#">
+          <span class="tile__top"><span class="tile__icon"><svg class="icon icon--lg"><use href="#i-ticket"/></svg></span><span class="tile__go"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span></span>
+          <span class="tile__body"><h3 class="tile__title">Skipassy i bilety</h3><span class="tile__desc">Jedno- i wielodniowe, wejściówki, wydarzenia</span></span>
+        </a>
+        <a class="tile tile--wycieczki" href="#">
+          <span class="tile__top"><span class="tile__icon"><svg class="icon icon--lg"><use href="#i-compass"/></svg></span><span class="tile__go"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span></span>
+          <span class="tile__body"><h3 class="tile__title">Wycieczki</h3><span class="tile__desc">Opłacone wyjazdy i rezerwacje</span></span>
+        </a>
+        <a class="tile tile--transport" href="#">
+          <span class="tile__top"><span class="tile__icon"><svg class="icon icon--lg"><use href="#i-car"/></svg></span><span class="tile__go"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span></span>
+          <span class="tile__body"><h3 class="tile__title">Transport</h3><span class="tile__desc">Wolne miejsca w aucie i busie</span></span>
+        </a>
+        <a class="tile tile--noclegi" href="#">
+          <span class="tile__top"><span class="tile__icon"><svg class="icon icon--lg"><use href="#i-bed"/></svg></span><span class="tile__go"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span></span>
+          <span class="tile__body"><h3 class="tile__title">Noclegi</h3><span class="tile__desc">Hotele i apartamenty</span></span>
+        </a>
+        <a class="tile tile--sport" href="#">
+          <span class="tile__top"><span class="tile__icon"><svg class="icon icon--lg"><use href="#i-dumbbell"/></svg></span><span class="tile__go"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span></span>
+          <span class="tile__body"><h3 class="tile__title">Sport i usługi</h3><span class="tile__desc">Sprzęt, instruktorzy, lekcje</span></span>
+        </a>
+        <a class="tile tile--inne" href="#">
+          <span class="tile__top"><span class="tile__icon"><svg class="icon icon--lg"><use href="#i-spark"/></svg></span></span>
+          <span class="tile__body"><h3 class="tile__title">Inne</h3><span class="tile__desc">Wszystko, czego nie wykorzystasz</span></span>
+          <span class="tile__go"><svg class="icon"><use href="#i-arrow-up-right"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NAJNOWSZE OKAZJE -->
+  <section id="oferty" class="section section--flush-top" aria-labelledby="latest-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="latest-title" class="section__title">Najnowsze okazje</h2>
+        <a class="link-strong" href="#">Zobacz wszystkie</a>
+      </div>
+      <ul class="cards">
+        <li>
+          <article class="ticket">
+            <div class="ticket__media"><div class="ph" role="img" aria-label="Zdjęcie oferty"><svg class="icon icon--lg"><use href="#i-ticket"/></svg><span>Zdjęcie oferty</span></div></div>
+            <div class="ticket__body">
+              <div class="ticket__meta"><span class="tag"><svg class="icon icon--sm"><use href="#i-ticket"/></svg>Skipass</span><span class="ticket__when">Za 5 dni</span></div>
+              <h3 class="ticket__title"><a class="ticket__link" href="#">Skipass Jasná – 2 dni</a></h3>
+              <p class="ticket__sub">15–16 stycznia · Słowacja</p>
+            </div>
+            <div class="ticket__stub"><p class="ticket__price">300 zł</p><span class="btn btn--secondary btn--sm" aria-hidden="true">Zobacz</span></div>
+          </article>
+        </li>
+        <li>
+          <article class="ticket">
+            <div class="ticket__media"><div class="ph" role="img" aria-label="Zdjęcie oferty"><svg class="icon icon--lg"><use href="#i-car"/></svg><span>Zdjęcie oferty</span></div></div>
+            <div class="ticket__body">
+              <div class="ticket__meta"><span class="tag tag--transport"><svg class="icon icon--sm"><use href="#i-car"/></svg>Transport</span><span class="ticket__when">Za 2 dni</span></div>
+              <h3 class="ticket__title"><a class="ticket__link" href="#">Wolne 2 miejsca – na narty</a></h3>
+              <p class="ticket__sub">Kraków → Zakopane</p>
+            </div>
+            <div class="ticket__stub"><p class="ticket__price">50 zł/os.</p><span class="btn btn--secondary btn--sm" aria-hidden="true">Zobacz</span></div>
+          </article>
+        </li>
+        <li>
+          <article class="ticket">
+            <div class="ticket__media"><div class="ph" role="img" aria-label="Zdjęcie oferty"><svg class="icon icon--lg"><use href="#i-bed"/></svg><span>Zdjęcie oferty</span></div></div>
+            <div class="ticket__body">
+              <div class="ticket__meta"><span class="tag tag--nocleg"><svg class="icon icon--sm"><use href="#i-bed"/></svg>Noclegi</span><span class="ticket__when">Za 9 dni</span></div>
+              <h3 class="ticket__title"><a class="ticket__link" href="#">Apartament – 2 noce</a></h3>
+              <p class="ticket__sub">Białka Tatrzańska</p>
+            </div>
+            <div class="ticket__stub"><p class="ticket__price">450 zł</p><span class="btn btn--secondary btn--sm" aria-hidden="true">Zobacz</span></div>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- MAPA -->
+  <section id="mapa" class="section section--flush-top" aria-labelledby="map-title">
+    <div class="container">
+      <div class="mapband on-dark">
+        <div class="mapband__copy">
+          <h2 id="map-title">Mapa okazji</h2>
+          <p>Zobacz oferty w Polsce i Europie, ustaw promień wokół siebie i wybierz termin. Powiadomimy Cię, gdy pojawi się coś pasującego.</p>
+          <a class="btn btn--primary" href="#">Otwórz mapę</a>
+        </div>
+        <div class="map map--dark" role="img" aria-label="Podgląd mapy z ofertami w promieniu 100 km">
+          <div class="map__radius"></div>
+          <span class="pin pin--origin">Kraków</span>
+          <span class="pin" data-slot="1">120 zł</span>
+          <span class="pin" data-slot="2">50 zł</span>
+          <span class="pin pin--hot" data-slot="3">300 zł</span>
+          <span class="pin" data-slot="4">450 zł</span>
+          <span class="pin" data-slot="5">260 zł</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SZUKAM -->
+  <section id="szukam" class="section section--flush-top" aria-labelledby="wanted-title">
+    <div class="container">
+      <div class="section-head section-head--stack">
+        <h2 id="wanted-title" class="section__title">Ktoś szuka tego, co masz</h2>
+        <p class="section__lead">Oferty poszukiwane: odpowiedz jednym kliknięciem.</p>
+      </div>
+      <div class="wanted">
+        <div class="wanted__row">
+          <span class="tag tag--wanted">Szukam</span>
+          <p class="wanted__text"><strong>2 miejsc w samochodzie</strong> <span>Kraków → Austria · 20–25 stycznia</span></p>
+          <a class="btn btn--secondary btn--sm" href="#">Mam taką ofertę</a>
+        </div>
+        <div class="wanted__row">
+          <span class="tag tag--wanted">Szukam</span>
+          <p class="wanted__text"><strong>dwóch skipassów</strong> <span>Szczyrk · 10 lutego</span></p>
+          <a class="btn btn--secondary btn--sm" href="#">Mam taką ofertę</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JAK TO DZIAŁA -->
+  <section id="jak-to-dziala" class="section section--sand" aria-labelledby="how-title">
+    <div class="container">
+      <div class="section-head"><h2 id="how-title" class="section__title">Jak to działa</h2></div>
+      <ol class="steps">
+        <li class="step"><span class="step__num" aria-hidden="true">1</span><h3>Dodaj ogłoszenie</h3><p>Mniej niż minuta: kategoria, miejsce, termin, cena i zdjęcie.</p></li>
+        <li class="step"><span class="step__num" aria-hidden="true">2</span><h3>Dogadaj się na czacie</h3><p>Bez ujawniania numeru. Możesz zaproponować własną cenę.</p></li>
+        <li class="step"><span class="step__num" aria-hidden="true">3</span><h3>Zapłać bezpiecznie</h3><p>Płatność z ochroną kupującego i oceny użytkowników.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ZAUFANIE -->
+  <section class="section" aria-labelledby="trust-title">
+    <div class="container trust">
+      <h2 id="trust-title" class="section__title">Bezpiecznie od pierwszego kliknięcia</h2>
+      <ul class="trust__list">
+        <li class="trust__item"><span class="trust__icon"><svg class="icon"><use href="#i-user-check"/></svg></span><h3>Zweryfikowani użytkownicy</h3><p>Potwierdzony e-mail i telefon, opcjonalnie tożsamość.</p></li>
+        <li class="trust__item"><span class="trust__icon"><svg class="icon"><use href="#i-chat"/></svg></span><h3>Czat bez numeru</h3><p>Rozmawiasz w aplikacji, telefon zostaje prywatny.</p></li>
+        <li class="trust__item"><span class="trust__icon"><svg class="icon"><use href="#i-shield"/></svg></span><h3>Ochrona kupującego</h3><p>Pieniądze trafiają do sprzedającego po potwierdzeniu.</p></li>
+        <li class="trust__item"><span class="trust__icon"><svg class="icon"><use href="#i-star"/></svg></span><h3>Oceny i zgłoszenia</h3><p>Historia sprzedających i szybkie zgłaszanie ofert.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--flush-top" aria-labelledby="faq-title">
+    <div class="container container--narrow">
+      <h2 id="faq-title" class="section__title section__title--spaced">Najczęstsze pytania</h2>
+      <details class="faq"><summary>Czy każdy bilet mogę przekazać?</summary><p>Nie zawsze. Przy każdej ofercie zaznaczasz, czy jest przenoszalna i jakie warunki narzuca organizator.</p></details>
+      <details class="faq"><summary>Ile kosztuje dodanie ogłoszenia?</summary><p>Na start dodawanie jest bezpłatne. Opcjonalnie możesz wyróżnić ofertę.</p></details>
+      <details class="faq"><summary>Czy wspólny przejazd to przewóz?</summary><p>Dzielisz koszty podróży, której i tak jedziesz. Zarobkowy przewóz osób to inna działalność.</p></details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" aria-labelledby="cta-title">
+    <div class="container cta__inner">
+      <h2 id="cta-title">Masz coś, czego nie wykorzystasz?</h2>
+      <a class="btn btn--dark" href="#">Dodaj ogłoszenie</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <a class="logo logo--light" href="/" aria-label="Oddaj Dalej – strona główna">
+          <span class="logo__mark"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+          <span class="logo__word">Oddaj Dalej</span>
+        </a>
+        <p class="site-footer__tagline">Giełda niewykorzystanych okazji.</p>
+      </div>
+      <nav aria-labelledby="f-offers">
+        <h2 id="f-offers" class="footer-title">Oferty</h2>
+        <ul><li><a href="#">Skipassy</a></li><li><a href="#">Wycieczki</a></li><li><a href="#">Transport</a></li><li><a href="#">Noclegi</a></li></ul>
+      </nav>
+      <nav aria-labelledby="f-help">
+        <h2 id="f-help" class="footer-title">Pomoc</h2>
+        <ul><li><a href="#jak-to-dziala">Jak to działa</a></li><li><a href="#">Bezpieczeństwo</a></li><li><a href="#">Kontakt</a></li></ul>
+      </nav>
+      <nav aria-labelledby="f-legal">
+        <h2 id="f-legal" class="footer-title">Prawne</h2>
+        <ul><li><a href="#">Regulamin</a></li><li><a href="#">Prywatność</a></li></ul>
+      </nav>
+    </div>
+    <p class="site-footer__legal">© 2026 Oddaj Dalej</p>
+  </div>
+</footer>
+
+</body>
+</html>
