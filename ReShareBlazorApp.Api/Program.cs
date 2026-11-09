@@ -6,7 +6,7 @@ using ReShareBlazorApp.Api.Date;
 using ReShareBlazorApp.Api.Interfaces.Services;
 using ReShareBlazorApp.Api.Services;
 using System.Text;
-
+//
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ReshareDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString
